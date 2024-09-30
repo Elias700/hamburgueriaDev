@@ -1,0 +1,108 @@
+
+
+/* Estilos básicos do menu */
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ee1616;
+    position: relative; /* Isso ajuda no controle do posicionamento absoluto dos itens internos */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition:  0.3s ease-in-out;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    text-decoration: none;
+  }
+  
+  /* Menu escondido para dispositivos móveis */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+
+
+  
+  
+
+  @media (max-width: 480px) {
+
+    .cabeçalho{
+        background: rgb(189, 32, 32);
+    }
+
+    .nav-links {
+        gap: 0;
+        text-align: center;
+        background: rgb(47, 75, 135);
+      }
+    
+      .nav-links li {
+        padding: 0.8rem 0; /* Ajusta o espaçamento para telas menores */
+      }
+    
+      .informacoes h1 {
+        font-size: 1.8rem; /* Ajusta o tamanho do título em telas menores */
+      }
+    
+      .informacoes p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+      }
+  }
+
+
+
+  
+  /* Responsividade para tablets e smartphones */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #a7bd17;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+  
+    .nav-links.open {
+      height: auto;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+  /* Ajuste para telas menores que 480px (smartphones) */
+ 
+  /* Estilos para o conteúdo da seção informacoes */
+  .informacoes {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .informacoes h1 {
+    color: #333;
+    font-size: 2.5rem;
+  }
+  
+  .informacoes p {
+    color: #666;
+    font-size: 1rem;
+  }
+
+
+
