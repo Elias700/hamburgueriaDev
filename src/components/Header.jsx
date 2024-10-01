@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({Logo}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,9 +25,11 @@ const Header = () => {
       </nav>
 
       <div className='informacoes'>
-        <h1>Hamburgueria DEV</h1>
+        <h2 className='title-principal'>Hamburgueria DEV</h2>
         <div className='ajuste'>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio saepe, minus dolorum ut eveniet neque quas blanditiis ea cumque excepturi repellat, vitae tempora itaque alias quam nemo recusandae, facilis sed.</p>
+          <img src={Logo} alt="" className='logo'/>
+          <p id='description'> Aqui, cada hambúrguer conta uma história de sabor, venha conferir os melhores sabores de hambúrgueres. </p>
+          <button id='btt1'>Confira</button>
         </div>
       </div>
     </header>

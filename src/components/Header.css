@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
 
 /* Estilos básicos do menu */
 .cabeçalho {
@@ -6,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #ee1616;
+    background-color: #cc1e1e;
     position: relative; /* Isso ajuda no controle do posicionamento absoluto dos itens internos */
   }
   
@@ -31,24 +33,84 @@
     color: white;
   }
 
+  /* Estilos para o conteúdo da seção informacoes */
+  .informacoes {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .informacoes h1 {
+    color: #333;
+    font-size: 2.5rem;
+  }
+  
+  .informacoes p {
+    color: #667;
+    font-size: 1rem;
+  }
 
-  
-  
 
   @media (max-width: 480px) {
 
     .cabeçalho{
-        background: rgb(189, 32, 32);
+      background: rgba(189, 32, 32, 0.998);
     }
 
-    .nav-links {
+    .nav-links{
         gap: 0;
         text-align: center;
-        background: rgb(47, 75, 135);
+        z-index: 10;
       }
     
       .nav-links li {
         padding: 0.8rem 0; /* Ajusta o espaçamento para telas menores */
+      }
+
+    .cabeçalho{
+      width: 106vw;
+    }
+
+      li{
+        font-size: 20px;
+      }
+
+      .title-principal{
+        font-family:  "Spicy Rice", serif;
+        font-size: 60px;
+        color: rgb(132, 29, 29);
+        text-shadow: 2px 2px #fff;
+      }
+
+      .logo{
+        height: 600px;
+        position: relative;
+        bottom: 130px;
+      }
+
+      #description{
+        color: #fff;
+        position: relative;
+        bottom: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      #btt1{
+        position: relative;
+        bottom: 250px;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 15px 50px;
+        border-radius: 15px;
+        border: none;
+        background: #890909;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #btt1:hover{
+        background: #c21313;
+        transition: 0.5s;
       }
     
       .informacoes h1 {
@@ -70,39 +132,113 @@
       position: absolute;
       top: 100%;
       right: 0;
-      background-color: #a7bd17;
+      background-color: #890909;
       width: 100%;
       height: 0;
       overflow: hidden;
       transition: height 0.3s ease;
     }
-  
+
+    li{
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
     .nav-links.open {
       height: auto;
+      z-index: 10;
+      text-align: center;
+      padding: 20px;
     }
   
     .menu-icon {
       display: block;
     }
-  }
-  
-  /* Ajuste para telas menores que 480px (smartphones) */
- 
-  /* Estilos para o conteúdo da seção informacoes */
-  .informacoes {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .informacoes h1 {
-    color: #333;
-    font-size: 2.5rem;
-  }
-  
-  .informacoes p {
-    color: #666;
-    font-size: 1rem;
+
+    .title-principal{
+        font-family:  "Spicy Rice", serif;
+        font-size: 60px;
+        color: rgb(132, 29, 29);
+        text-shadow: 2px 2px #fff;
+        position: relative;
+        top: 30px;
+    }
+
+    .logo{
+      height: 650px;
+      position: relative;
+      bottom: 100px;
+    }
+
+    #description{
+      position: relative;
+      bottom: 280px;
+      color: #fff;
+      font-size: 25px;
+    }
+
+    #btt1{
+        position: relative;
+        bottom: 230px;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 15px 60px;
+        border-radius: 15px;
+        border: none;
+        background: #890909;
+        color: #fff;
+        cursor: pointer;
+    }
+     
   }
 
+
+  @media (min-width: 1024px) {
+    .cabeçalho {
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+    }
+  
+    .nav-links {
+      flex-direction: row;
+      position: static; /* Remove o posicionamento absoluto para desktop */
+      height: auto; /* Garante que o menu esteja visível no layout desktop */
+      width: auto; /* Mantém o menu ajustado ao conteúdo */
+      gap: 2rem; /* Aumenta o espaçamento entre os links */
+    }
+  
+    .menu-icon {
+      display: none; /* Esconde o ícone do menu hambúrguer no desktop */
+    }
+  
+    .title-principal {
+      font-size: 72px; /* Aumenta o tamanho do título para telas maiores */
+      position: relative;
+      top: 0;
+      color: rgb(132, 29, 29);
+      text-shadow: 2px 2px #fff;
+    }
+  
+    .logo {
+      height: 800px; /* Ajusta o tamanho da logo para telas maiores */
+      position: relative;
+      bottom: 0;
+    }
+  
+    #description {
+      font-size: 24px; /* Aumenta o tamanho da descrição no desktop */
+      position: relative;
+      bottom: 0;
+    }
+  
+    #btt1 {
+      font-size: 32px;
+      padding: 20px 60px; /* Ajusta o tamanho do botão */
+    }
+  }
+  
+
+ 
+  
 
 
